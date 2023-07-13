@@ -1,26 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {Header} from "./modules/header/Header";
+import {Card} from "./modules/card/Card";
+import {CardType} from "./constans/CardType";
+import {ButtonCard} from "./modules/buttonCard/ButtonCard";
+import {Footer} from "./modules/footer/Footer";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="App">
+            <Header/>
+            <div className="cards-container">
+                <Card type={CardType.Person}/>
+                <Card type={CardType.Vehicle}/>
+                <div className="button-cards-container">
+                    <ButtonCard swap={false}/>
+                    <ButtonCard swap={true}/>
+                </div>
+            </div>
+            <Footer/>
+        </div>
+    );
 }
 
 export default App;

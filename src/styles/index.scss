@@ -1,0 +1,33 @@
+
+@import "variables";
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500&display=swap');
+
+*{
+  box-sizing: border-box!important;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+body {
+  background: var(--background);
+}
+
+.half-opacity {
+  opacity: .5;
+}
+
+.cards-container {
+  padding: 0 32px;
+  display: flex;
+  justify-content: center;
+}
+
+.card-bottom-block-item:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+@media screen and (max-width: 1399px) {
+    .cards-container {
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+}
